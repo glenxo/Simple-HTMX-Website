@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTMX Dummy Website</title>
+  <script src="https://cdn.jsdelivr.net/npm/htmx.org@3.2.0/dist/htmx.js"></script>
+  <style>
+    /* Add your own custom styles here */
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Website</h1>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="#" hx-get="/home">Home</a></li>
+      <li><a href="#" hx-get="/about">About</a></li>
+      <li><a href="#" hx-get="/contact">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <section id="hero" hx-get="/hero">
+    <!-- Content loaded dynamically -->
+  </section>
+  
+  <footer>
+    <p>&copy; 2023 My Website. All rights reserved.</p>
+  </footer>
+  
+  <script>
+    // Add your own custom JavaScript here if needed
+  </script>
+</body>
+</html>
