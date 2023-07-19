@@ -1,49 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>HTMX Dummy Website</title>
-  <script src="https://cdn.jsdelivr.net/npm/htmx.org@3.2.0/dist/htmx.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Shampoo</title>
+  <script src="https://unpkg.com/htmx.org/dist/htmx.min.js"></script>
   <style>
-*{
-  margin:0; padding:0;
-  box-sizing: border-box;
-  outline: none; border:none;
-  text-decoration: none;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: lighter;
+    body {
+      background-color: #ffffff;
+      padding: 20px;
+    }
+
+    #modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-html{
-  font-size: 62.5%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  scroll-padding-top: 6rem;
+#modal button {
+  margin-top: 20px;
 }
+
+
+    .modal h3 {
+      font-weight: bold;
+      text-align: center;
+    }
+
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>Shampoo</h1>
-  </header>
-  
   <nav>
     <ul>
-      <li><a href="#" hx-get="/home">Home</a></li>
-      <li><a href="#" hx-get="/about">About</a></li>
-      <li><a href="#" hx-get="/contact">Contact</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">View Cart</a></li>
     </ul>
   </nav>
-  
-  <section id="hero" hx-get="/hero">
-    <!-- Content loaded dynamically -->
-  </section>
-  
-  <footer>
-    <p>&copy; 2023 My Website. All rights reserved.</p>
-  </footer>
-  
+
+  <div class="hero-section">
+    <h1>Shampoo from anywhere in the globe is here for you</h1>
+  </div>
+
+  <div id="modal" class="modal">
+    <h3>Special Promotion!</h3>
+    <p>Get 40% off on all departments for first-time customers!</p>
+    <button>lets go!</button>
+  </div>
+
   <script>
-    // Add your own custom JavaScript here if needed
+    setTimeout(function() {
+      let modal = document.getElementById("modal");
+      modal.style.display = "block";
+    }, 5000); 
   </script>
 </body>
 </html>
